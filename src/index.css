@@ -1,0 +1,91 @@
+body{
+  margin:0;
+
+}
+*{
+  box-sizing: border-box;
+}
+.main{
+  display:flex;
+  flex-direction: row;
+  justify-content:center;
+}
+.mainTab{
+  margin:20px auto;
+  width: 45%;
+  height:500px;
+  border: 20px solid rgb(184, 181, 181);
+  background-color: rgb(2, 43, 43);
+}
+.buttons{
+  padding-top:15px;
+  display:flex;
+  flex-direction: row;
+  justify-content:center;
+}
+.btn{
+  width:300px;
+  height: 50px;
+  color: rgb(141, 155, 155);
+  background-color:rgb(40, 65, 65);
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  border-collapse: collapse;
+}
+.btn__active{
+  background-color: rgb(1, 116, 87);
+  color: #fff;
+}
+.form__title{
+  text-align: center;
+  color: rgb(229, 226, 226);
+}
+.form_control input{
+  background-color: inherit;
+  padding: 10px;
+  margin :20px 30px;
+  width: 91%;
+  border:3px solid rgb(76, 92, 92);
+  font-size: 20px;
+  outline: none;
+}
+.form_control input[type=text]{
+  width: 40%;
+  padding: 5px;
+}
+.forget_title{
+  margin :0 30px;
+}
+.forget_title a{
+  text-decoration-line: none;
+  color:rgb(15, 180, 120);;
+}
+.btn__submit{
+  width: 94%;
+  font-size: 30px;
+}
+.form_sign input{
+  padding: 7px;
+  margin :15px 30px;
+}
+.titlesign{
+  font-size: 27px;
+}
+.input_pass{
+  width: 100%;
+}
+.sign-form{
+  height:900px;
+}
+.select__degree{
+  margin:20px 30px;
+  width: 91%;
+  color:rgb(122, 121, 121);
+  height:50px;
+  background-color: inherit;
+  border:3px solid rgb(76, 92, 92);
+  font-size: 20px;
+  outline: none;
+}
