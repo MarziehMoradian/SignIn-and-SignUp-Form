@@ -4,18 +4,18 @@ class Dropdown extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-            propvince:[],
+            Arraystate:[],
 			cities : [],
-            selectProvince:'',
+            selectArraystate:'',
 			
 		};
-		this.changeProvince = this.changeProvince.bind(this);
+		this.changeArraystate = this.changeArraystate.bind(this);
 		
 	}
   
 	componentDidMount() {
 		this.setState({
-			propvince : [
+			Arraystate : [
 				{  name:'اصفهان' , cities: ['نجف آباد', 'کاشان']},
 				{  name:'آذربایجان شرقی' , cities: ['اهر', 'تبریز',]},
 				{  name:'آذربایجان غربی' , cities: ['  خوی', 'ارومیه']},
@@ -30,9 +30,9 @@ class Dropdown extends React.Component {
 		});
 	}
   
-	changeProvince(event) {
-		this.setState({selectedProvince: event.target.value});
-		this.setState({cities : this.state.propvince.find(cntry => cntry.name === event.target.value).cities});
+	changeArraystate(event) {
+		this.setState({selectedArraystate: event.target.value});
+		this.setState({cities : this.state.Arraystate.find(cntry => cntry.name === event.target.value).cities});
 	}
 
 
@@ -44,9 +44,9 @@ class Dropdown extends React.Component {
 
 				<div>
 					
-					<select className="select__degree" placeholder="استان محل تولد" value={this.state.selectedProvince} onChange={this.changeProvince}>
+					<select className="select__degree" placeholder="استان محل تولد" value={this.state.selectedArraystate} onChange={this.changeArraystate}>
 						<option>نام استان</option>
-						{this.state.propvince.map((e, key) => {
+						{this.state.Arraystate.map((e, key) => {
 							return <option key={key}>{e.name}</option>;
 						})}
 					</select>

@@ -39,7 +39,7 @@ export const Main = () => {
             {showSignFOrm &&<Form_signin formTitle="رایگان ثبت نام کنید" showLoginFOrm={showLoginFOrm} onChange={changeTabs} seccessPage={doneJoin}/>}               
             {show &&<Enter show={show} onClose={()=>setShow(false)}/>}
             {showForget &&<Forgot showForget={showForget} onClose={()=>setShowForget(false)} />}
-            {showInfo && <Succesee showInfo={showInfo}/>}
+            {showInfo && <Succesee showInfo={showInfo} />}
         </div>
     )
 }

@@ -9,6 +9,20 @@ export const Form_signin = ({formTitle,onChange,showLoginFOrm,seccessPage}) => {
     const[email,setEmail]=useState("");
     const[password,setPassword]=useState("");
     const[education,setEducation]=useState("");
+    const  readPro={
+        
+        fName:fName,
+        
+        lName:lName,
+        
+        email:email,
+        
+        password:password
+    }
+        
+            
+        
+
     const  handleTabs=()=>{
         onChange();
     }
