@@ -1,13 +1,22 @@
-import React from 'react';
+import React,{useState} from 'react';
 import Button from './Button';
-export const Form_login = ({formTitle,showSignFOrm,onChange,showLoginFOrm}) => {
+import Enter from './Enter';
+import Fogot from './Forgot';
+export const Form_login = ({formTitle,showSignFOrm,onChange,pageEnter,pageForget}) => {
     const  handleTabs=()=>{
         onChange();
     }
+   const onAdd=()=>{
+       pageEnter();
+    }
+    const fogorPage=()=>{
+        pageForget();
+    }
+
     return (
         <div className="mainTab">
             <div className="buttons">
-                <Button btnTitle="ورود"  classes={showSignFOrm ?"":"btn__active" } />
+                <Button btnTitle="ورود"  classes={showSignFOrm ?"":"btn__active" }  />
                 <Button btnTitle="ثبت نام"  chengeTab={handleTabs}/>
             </div>
             <h1 className="form__title">{formTitle}</h1>
@@ -15,8 +24,9 @@ export const Form_login = ({formTitle,showSignFOrm,onChange,showLoginFOrm}) => {
                 <input type="email" placeholder="پست الکترونیک" className="input_email"/><br />
                 <input type="password" placeholder="پسورد" className="input_pass" id="id_password"/>
                 <br />
-                <p className="forget_title"><a href="">فراموش کردید؟</a></p>
-                <Button typeButton="submit" classes="btn__submit" btnTitle="ورود" />
+                <button className="forget_title"  onClick={fogorPage}> فراموش کردید؟</button>
+                <Button typeButton="submit" classes="btn__submit" btnTitle="ورود" chengeTab={onAdd}/>
+                
             </form>
         </div>
     )
